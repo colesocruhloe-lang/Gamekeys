@@ -3,67 +3,215 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#080612">
+<meta name="description" content="GameKeys — современная витрина цифровых игр. GTA VI в центре внимания.">
 <title>GameKeys — GTA VI</title>
-<meta name="description" content="GameKeys — магазин цифровых игровых ключей.">
 <style>
-:root{--bg:#05060d;--panel:#0b0d18;--panel2:#111322;--line:#24263a;--pink:#ff2bd6;--violet:#8b5cf6;--cyan:#25d9ff;--text:#fff;--muted:#a8abbc}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(800px 500px at 80% 5%,#3b0b4d 0%,transparent 60%),radial-gradient(700px 500px at 10% 40%,#081b35 0%,transparent 60%),var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Arial,sans-serif}
-a{color:inherit;text-decoration:none}.wrap{width:min(1180px,92%);margin:auto}
-header{position:sticky;top:0;z-index:20;background:rgba(5,6,13,.82);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.08)}
-.nav{height:72px;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:11px;font-weight:900;font-size:21px}.brandmark{width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg,var(--violet),var(--pink));display:grid;place-items:center;box-shadow:0 0 30px #ff2bd655}.brandmark:before{content:"◆";font-size:18px}.brand span{color:#ff5fe1}
-nav{display:flex;gap:26px;color:#c9cbd7;font-size:14px}nav a:hover{color:white}.secure{font-size:13px;color:#b9bdd0}
-.hero{min-height:650px;display:grid;grid-template-columns:1.02fr .98fr;gap:40px;align-items:center;position:relative;overflow:hidden}
-.hero:after{content:"VI";position:absolute;right:-50px;bottom:-130px;font-size:520px;line-height:1;font-weight:1000;font-style:italic;color:#ffffff05;pointer-events:none}
-.kicker{display:inline-flex;gap:8px;align-items:center;border:1px solid #ff2bd666;background:#ff2bd611;color:#ff7ee8;padding:8px 12px;border-radius:999px;font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
-h1{font-size:clamp(48px,7vw,86px);line-height:.94;margin:20px 0 18px;letter-spacing:-.055em}h1 em{font-style:normal;background:linear-gradient(90deg,#fff,var(--pink),var(--violet));-webkit-background-clip:text;background-clip:text;color:transparent}
-.lead{font-size:18px;line-height:1.6;color:#b8bbc9;max-width:620px}.actions{display:flex;gap:13px;flex-wrap:wrap;margin:30px 0}
-.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 22px;border-radius:13px;font-weight:800;border:1px solid #ffffff14;background:#ffffff08}.btn.primary{background:linear-gradient(100deg,var(--violet),var(--pink));box-shadow:0 12px 35px #a53cff35}.btn:hover{transform:translateY(-1px)}
-.trust{display:flex;gap:22px;flex-wrap:wrap;color:#b5b8c8;font-size:13px}.trust b{color:#fff}
-.visual{position:relative;min-height:500px;border:1px solid #ffffff12;border-radius:30px;background:linear-gradient(145deg,#171126,#080a13 55%,#10152b);overflow:hidden;box-shadow:0 30px 100px #0008}
-.sun{position:absolute;width:280px;height:280px;border-radius:50%;right:12%;top:8%;background:radial-gradient(circle,#ffdf8a 0 17%,#ff4fcf 52%,transparent 70%);filter:blur(1px);opacity:.85}
-.grid{position:absolute;inset:auto -20% -25% -20%;height:55%;background:linear-gradient(#ff2bd633 1px,transparent 1px),linear-gradient(90deg,#ff2bd633 1px,transparent 1px);background-size:42px 42px;transform:perspective(300px) rotateX(62deg);transform-origin:bottom;mask-image:linear-gradient(to top,black,transparent)}
-.palm{position:absolute;right:7%;top:13%;font-size:110px;transform:rotate(-8deg);opacity:.8}.car{position:absolute;left:10%;bottom:17%;width:76%;height:100px;border-radius:80px 80px 28px 28px;background:linear-gradient(160deg,#22283e,#090b13);box-shadow:0 25px 45px #000,0 0 45px #a43cff33}.car:before{content:"";position:absolute;left:18%;top:-55px;width:55%;height:70px;background:linear-gradient(150deg,#252b42,#0c0f1b);clip-path:polygon(16% 100%,30% 15%,75% 0,91% 100%)}.light{position:absolute;width:70px;height:12px;background:#ff2bd6;filter:blur(8px);bottom:28px}.l1{left:35px}.l2{right:35px}.visualTag{position:absolute;left:24px;top:24px;border:1px solid #ffffff20;background:#05060dcc;padding:9px 12px;border-radius:10px;font-size:12px;color:#d6d8e3}
-.section{padding:80px 0}.section h2{font-size:38px;margin:0 0 12px;letter-spacing:-.03em}.sub{color:var(--muted);margin-bottom:28px}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:linear-gradient(145deg,#111422,#0a0c15);border:1px solid #ffffff10;border-radius:20px;padding:25px}.icon{width:44px;height:44px;border-radius:13px;display:grid;place-items:center;background:#8b5cf622;border:1px solid #8b5cf644;margin-bottom:18px}.card h3{margin:0 0 8px}.card p{margin:0;color:#9ea2b4;line-height:1.55}
-.product{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:stretch}.productArt{min-height:430px;border-radius:24px;border:1px solid #ffffff10;background:linear-gradient(160deg,#1e1230,#090b13);position:relative;overflow:hidden}.productArt .title{position:absolute;left:28px;bottom:28px;font-size:46px;font-weight:1000;line-height:.88;font-style:italic}.productInfo{border:1px solid #ffffff10;background:#0c0f19;border-radius:24px;padding:30px}.badge{display:inline-block;padding:7px 10px;border-radius:999px;background:#ff2bd615;color:#ff7ee8;border:1px solid #ff2bd644;font-size:11px;font-weight:900}.price{font-size:52px;font-weight:950;margin:15px 0}.platforms{display:flex;gap:8px;flex-wrap:wrap}.platforms span{padding:8px 10px;border:1px solid #ffffff12;border-radius:9px;color:#c7cad7;font-size:12px}.paynote{margin-top:18px;padding:13px;border-radius:12px;background:#ffffff05;color:#9ea2b4;font-size:13px;line-height:1.5}
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.step{padding:20px;border:1px solid #ffffff0e;border-radius:17px;background:#ffffff04}.num{font-size:28px;font-weight:950;color:#ff54df}
-footer{border-top:1px solid #ffffff0d;padding:35px 0;color:#888d9f;font-size:13px}.footerline{display:flex;justify-content:space-between;gap:20px}
-@media(max-width:850px){nav,.secure{display:none}.hero,.product{grid-template-columns:1fr}.hero{padding:55px 0}.visual{min-height:400px}.cards,.steps{grid-template-columns:1fr}.section{padding:55px 0}h1{font-size:58px}.footerline{flex-direction:column}}
+:root{
+  --bg:#070711;--panel:#0d0d1d;--panel2:#121227;--text:#f7f5ff;--muted:#aaa6bf;
+  --pink:#ff21d4;--violet:#8c45ff;--cyan:#5ee7ff;--line:rgba(255,255,255,.10);
+  --shadow:0 24px 80px rgba(0,0,0,.45);--radius:24px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:
+ radial-gradient(circle at 80% 5%,rgba(255,33,212,.13),transparent 30%),
+ radial-gradient(circle at 10% 40%,rgba(93,69,255,.10),transparent 28%),
+ var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.5}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.container{width:min(1180px,calc(100% - 36px));margin:auto}
+header{position:fixed;z-index:50;top:0;left:0;right:0;background:rgba(7,7,17,.72);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+.nav{height:74px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{font-size:22px;font-weight:900;letter-spacing:-.8px;display:flex;align-items:center;gap:8px}
+.brand b{color:var(--pink)}
+.brand-mark{width:31px;height:31px;display:grid;place-items:center;background:linear-gradient(135deg,var(--pink),var(--violet));clip-path:polygon(38% 0,100% 0,64% 40%,91% 40%,25% 100%,42% 55%,10% 55%);filter:drop-shadow(0 0 13px rgba(255,33,212,.5))}
+nav{display:flex;gap:8px}
+nav a{font-size:13px;color:#d8d4e7;padding:10px 13px;border-radius:12px}
+nav a:hover{background:rgba(255,255,255,.07)}
+.nav-actions{display:flex;gap:9px;align-items:center}
+.icon-btn{width:39px;height:39px;border:1px solid var(--line);border-radius:12px;background:rgba(255,255,255,.04);color:white;display:grid;place-items:center}
+.hero{padding:118px 0 55px;min-height:760px;display:flex;align-items:center;position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;inset:74px 0 0;background:linear-gradient(90deg,rgba(7,7,17,.98) 0%,rgba(7,7,17,.78) 38%,rgba(7,7,17,.18) 75%,rgba(7,7,17,.55)),linear-gradient(0deg,var(--bg) 0%,transparent 22%),url("https://www.rockstargames.com/VI/_next/static/media/Official_Cover_Art_landscape.12.uu2irr.2_a.jpg?akim=1&imdensity=1&imwidth=3840") center/cover no-repeat;z-index:-1}
+.hero-content{max-width:650px}
+.kicker{display:inline-flex;gap:8px;align-items:center;border:1px solid rgba(255,33,212,.35);background:rgba(255,33,212,.08);padding:7px 11px;border-radius:999px;color:#ffd7f7;font-size:12px;font-weight:800}
+.kicker i{width:7px;height:7px;border-radius:50%;background:var(--pink);box-shadow:0 0 15px var(--pink)}
+h1{font-size:clamp(52px,8vw,92px);line-height:.88;letter-spacing:-5px;margin:23px 0 20px;text-transform:uppercase}
+h1 span{color:var(--pink);text-shadow:0 0 35px rgba(255,33,212,.4)}
+.hero p{font-size:18px;color:#d3cfdf;max-width:610px}
+.meta{display:flex;gap:18px;flex-wrap:wrap;margin:25px 0;color:#ddd9e8;font-size:14px}
+.meta strong{display:block;color:white}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap}
+.btn{border:0;border-radius:15px;padding:15px 21px;font-weight:900;cursor:pointer;font-size:14px;display:inline-flex;align-items:center;justify-content:center;gap:9px}
+.btn-primary{background:linear-gradient(135deg,#ff1ed2,#8d3cff);color:white;box-shadow:0 14px 35px rgba(255,33,212,.25)}
+.btn-primary:hover{transform:translateY(-1px);box-shadow:0 18px 42px rgba(255,33,212,.35)}
+.btn-ghost{border:1px solid var(--line);background:rgba(255,255,255,.06);color:white}
+.section{padding:70px 0}
+.section-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:26px}
+.eyebrow{color:#ff57dd;font-size:11px;font-weight:900;letter-spacing:1.5px;text-transform:uppercase}
+h2{font-size:clamp(30px,4vw,48px);line-height:1;margin:8px 0 0;letter-spacing:-2px}
+.muted{color:var(--muted)}
+.about{display:grid;grid-template-columns:1.1fr .9fr;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:linear-gradient(135deg,rgba(255,255,255,.05),rgba(255,255,255,.015));box-shadow:var(--shadow)}
+.about-img{min-height:400px;background:url("https://www.rockstargames.com/VI/_next/static/media/Jason_and_Lucia_Beach_landscape.0419q._86ukpt.jpg?akim=1&imdensity=1&imwidth=3840") center/cover}
+.about-copy{padding:40px}
+.about-copy h3{font-size:36px;line-height:1.05;margin:10px 0 15px}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:25px}
+.feature{padding:18px;border:1px solid var(--line);border-radius:18px;background:rgba(0,0,0,.18)}
+.feature b{display:block;margin-bottom:5px}.feature span{font-size:13px;color:var(--muted)}
+.product{display:grid;grid-template-columns:360px 1fr 260px;gap:28px;padding:24px;border:1px solid var(--line);border-radius:var(--radius);background:linear-gradient(145deg,#111125,#090914);box-shadow:var(--shadow)}
+.product-cover{min-height:420px;border-radius:18px;background:url("https://www.rockstargames.com/VI/_next/static/media/Official_Cover_Art_landscape.12.uu2irr.2_a.jpg?akim=1&imdensity=1&imwidth=1600") center/cover}
+.product h3{font-size:42px;margin:7px 0}
+.tags{display:flex;gap:8px;flex-wrap:wrap}.tag{border:1px solid var(--line);background:#111126;padding:7px 10px;border-radius:10px;font-size:12px}
+.checks{list-style:none;padding:0;margin:24px 0}.checks li{margin:12px 0;color:#d6d2df}.checks li:before{content:"✓";color:#ff46db;font-weight:900;margin-right:9px}
+.price{font-size:46px;font-weight:950;letter-spacing:-2px}.buy-note{font-size:11px;color:#89849d;margin-top:9px}
+.side{border-left:1px solid var(--line);padding-left:24px}.side h4{margin-top:0}.side-row{padding:14px 0;border-bottom:1px solid var(--line);font-size:13px}.side-row span{display:block;color:var(--muted);font-size:11px;margin-bottom:4px}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.shot{height:230px;border-radius:18px;overflow:hidden;border:1px solid var(--line);position:relative;background:#111}.shot img{width:100%;height:100%;object-fit:cover;transition:.4s}.shot:hover img{transform:scale(1.04)}.shot label{position:absolute;left:12px;bottom:12px;padding:7px 10px;border-radius:9px;background:rgba(5,5,15,.75);backdrop-filter:blur(8px);font-size:11px}
+.strip{margin:50px 0 0;padding:30px;border-radius:25px;background:linear-gradient(90deg,rgba(255,33,212,.2),rgba(110,60,255,.16));border:1px solid rgba(255,255,255,.09);display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.strip-item{text-align:center}.strip-item .ico{font-size:25px}.strip-item b{display:block;font-size:13px;margin:5px 0}.strip-item span{font-size:11px;color:#b5afc3}
+.faq{display:grid;grid-template-columns:1fr 1fr;gap:10px}.faq details{border:1px solid var(--line);background:rgba(255,255,255,.035);border-radius:14px;padding:15px 17px}.faq summary{cursor:pointer;font-weight:800;font-size:13px}.faq p{color:var(--muted);font-size:13px;margin:12px 0 0}
+footer{padding:45px 0 30px;border-top:1px solid var(--line);margin-top:40px}.footer-grid{display:grid;grid-template-columns:1fr auto auto;gap:40px}.footer-links{display:flex;gap:18px;flex-wrap:wrap;color:#aaa6b8;font-size:12px}.legal{border-top:1px solid var(--line);margin-top:25px;padding-top:18px;color:#777286;font-size:11px;display:flex;justify-content:space-between;gap:15px}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.72);backdrop-filter:blur(10px);display:none;align-items:center;justify-content:center;padding:20px;z-index:100}.modal.open{display:flex}.modal-card{max-width:480px;width:100%;background:#101022;border:1px solid var(--line);border-radius:22px;padding:28px;box-shadow:var(--shadow)}.modal-card h3{margin-top:0;font-size:25px}.close{float:right;border:0;background:none;color:white;font-size:25px;cursor:pointer}
+@media(max-width:900px){nav{display:none}.hero{min-height:700px}.hero:before{background:linear-gradient(90deg,rgba(7,7,17,.96),rgba(7,7,17,.68)),linear-gradient(0deg,var(--bg) 0%,transparent 30%),url("https://www.rockstargames.com/VI/_next/static/media/Official_Cover_Art_landscape.12.uu2irr.2_a.jpg?akim=1&imdensity=1&imwidth=2400") center/cover no-repeat}.product{grid-template-columns:1fr}.side{border-left:0;border-top:1px solid var(--line);padding:22px 0 0}.product-cover{min-height:300px}.about{grid-template-columns:1fr}.gallery{grid-template-columns:repeat(2,1fr)}.strip{grid-template-columns:repeat(2,1fr)}.footer-grid{grid-template-columns:1fr}}
+@media(max-width:560px){.container{width:min(100% - 24px,1180px)}.hero{padding-top:105px}.hero p{font-size:15px}h1{letter-spacing:-3px}.section{padding:52px 0}.about-copy{padding:25px}.features{grid-template-columns:1fr}.gallery{grid-template-columns:1fr}.shot{height:220px}.strip{grid-template-columns:1fr 1fr;padding:22px 12px}.legal{display:block}.legal span{display:block;margin-top:8px}}
 </style>
 </head>
 <body>
-<header><div class="wrap nav"><a class="brand" href="#"><span class="brandmark"></span>Game<span>Keys</span></a><nav><a href="#catalog">Каталог</a><a href="#how">Как купить</a><a href="#support">Поддержка</a></nav><div class="secure">◈ Безопасные платежи</div></div></header>
+<header>
+  <div class="container nav">
+    <a class="brand" href="#"><span class="brand-mark"></span>Game<b>Keys</b></a>
+    <nav>
+      <a href="#about">Об игре</a><a href="#product">Каталог</a><a href="#gallery">Галерея</a><a href="#faq">FAQ</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn" aria-label="Поиск">⌕</button>
+      <button class="icon-btn" aria-label="Корзина">🛒</button>
+    </div>
+  </div>
+</header>
 
 <main>
-<section class="wrap hero">
-<div>
-<div class="kicker">Цифровой магазин • Предзаказ</div>
-<h1>Grand Theft<br><em>Auto VI</em></h1>
-<p class="lead">Премиальный магазин цифровых ключей. Выбирайте игру, оплачивайте удобным способом и получайте цифровой товар после подтверждения платежа.</p>
-<div class="actions"><a class="btn primary" href="#catalog">Купить за $45 →</a><a class="btn" href="#how">Как это работает</a></div>
-<div class="trust"><span>✓ <b>Цифровая доставка</b></span><span>✓ <b>Поддержка</b></span><span>✓ <b>HTTPS</b></span></div>
-</div>
-<div class="visual"><div class="sun"></div><div class="palm">♧</div><div class="grid"></div><div class="car"><i class="light l1"></i><i class="light l2"></i></div><div class="visualTag">GAMEKEYS / VICE CITY COLLECTION</div></div>
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <div class="kicker"><i></i> ОФИЦИАЛЬНЫЕ МАТЕРИАЛЫ GTA VI</div>
+      <h1>Grand<br>Theft<br><span>Auto VI</span></h1>
+      <p>Добро пожаловать в Vice City. Исследуйте новый мир, познакомьтесь с Джейсоном и Люсией и отправляйтесь в путешествие по штату Леонида.</p>
+      <div class="meta">
+        <div>📅<strong>19 ноября 2026</strong>Дата релиза</div>
+        <div>🎮<strong>PS5 · Xbox Series X|S</strong>Платформы</div>
+        <div>🌴<strong>Vice City</strong>Место действия</div>
+      </div>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#product">🛒 Смотреть предложение — $45</a>
+        <a class="btn btn-ghost" href="#gallery">▣ Смотреть галерею</a>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section class="section" id="catalog"><div class="wrap"><h2>Популярный товар</h2><p class="sub">Один товар — простой и понятный checkout.</p>
-<div class="product"><div class="productArt"><div class="sun" style="right:25%;top:12%"></div><div class="grid"></div><div class="car" style="bottom:18%"></div><div class="title">GRAND<br>THEFT<br>AUTO VI</div></div>
-<div class="productInfo"><span class="badge">ПРЕДЗАКАЗ</span><h2 style="margin-top:15px">Grand Theft Auto VI</h2><p class="sub">Цифровой ключ активации</p><div class="platforms"><span>PC</span><span>Steam</span><span>Rockstar</span></div><div class="price">$45.00</div><a class="btn primary" style="width:100%" href="#" onclick="alert('Оплата будет подключена после настройки платёжного провайдера. Сейчас деньги не списываются.');return false;">Перейти к оплате →</a><div class="paynote">Сейчас это витрина. Реальное списание подключается через платёжного провайдера на серверной стороне; секретные API-ключи в этот HTML помещать нельзя.</div></div></div>
-</div></section>
+<section class="section" id="about">
+<div class="container">
+  <div class="about">
+    <div class="about-img"></div>
+    <div class="about-copy">
+      <div class="eyebrow">Об игре</div>
+      <h3>Новый уровень свободы</h3>
+      <p class="muted">GTA VI переносит игрока в Vice City и другие уголки Леониды. В центре истории — Джейсон и Люсия, которым приходится полагаться друг на друга после неудачного дела.</p>
+      <div class="features">
+        <div class="feature"><b>🌆 Vice City</b><span>Неоновый мегаполис и новые районы.</span></div>
+        <div class="feature"><b>👥 Jason & Lucia</b><span>Новая история и герои.</span></div>
+        <div class="feature"><b>🌴 Leonida</b><span>Большой мир за пределами города.</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
 
-<section class="section" id="how"><div class="wrap"><h2>Как это работает</h2><p class="sub">Простой путь от заказа до цифровой доставки.</p><div class="steps">
-<div class="step"><div class="num">01</div><h3>Выбор</h3><p class="sub">Выбираете цифровой товар.</p></div>
-<div class="step"><div class="num">02</div><h3>Оплата</h3><p class="sub">Платёж проходит через защищённый checkout.</p></div>
-<div class="step"><div class="num">03</div><h3>Проверка</h3><p class="sub">Сервер получает подтверждение платежа.</p></div>
-<div class="step"><div class="num">04</div><h3>Доставка</h3><p class="sub">Система выдаёт доступный ключ из склада.</p></div>
-</div></div></section>
+<section class="section" id="product">
+<div class="container">
+  <div class="section-head"><div><div class="eyebrow">Каталог</div><h2>GTA VI</h2></div><span class="muted">Цифровое предложение</span></div>
+  <div class="product">
+    <div class="product-cover"></div>
+    <div>
+      <div class="eyebrow">Grand Theft Auto VI</div>
+      <h3>$45</h3>
+      <div class="tags"><span class="tag">PlayStation 5</span><span class="tag">Xbox Series X|S</span><span class="tag">Digital</span></div>
+      <ul class="checks">
+        <li>Современная адаптивная витрина</li>
+        <li>Мгновенный переход к оформлению</li>
+        <li>Мобильная и десктопная версия</li>
+        <li>Поддержка безопасной оплаты после подключения процессинга</li>
+      </ul>
+      <button class="btn btn-primary" style="width:100%" onclick="openModal()">Купить сейчас — $45</button>
+      <div class="buy-note">Кнопка пока открывает демонстрационное окно. Реальную оплату подключайте на сервере через платёжного провайдера.</div>
+    </div>
+    <aside class="side">
+      <h4>Информация</h4>
+      <div class="side-row"><span>Релиз</span>19 ноября 2026</div>
+      <div class="side-row"><span>Платформы</span>PS5 / Xbox Series X|S</div>
+      <div class="side-row"><span>Материалы</span>Официальные изображения Rockstar Games</div>
+      <div class="side-row"><span>Статус магазина</span>Витрина / демо</div>
+    </aside>
+  </div>
+</div>
+</section>
 
-<section class="section" id="support"><div class="wrap"><div class="cards">
-<div class="card"><div class="icon">⚡</div><h3>Мгновенная доставка</h3><p>Автоматическая выдача после подтверждения успешного платежа.</p></div>
-<div class="card"><div class="icon">⌁</div><h3>Безопасная оплата</h3><p>Платёжные данные обрабатываются платёжным провайдером, а не этим HTML.</p></div>
-<div class="card"><div class="icon">◉</div><h3>Поддержка</h3><p>Свяжитесь с магазином по вопросам заказа и цифровой доставки.</p></div>
-</div></div></section>
+<section class="section" id="gallery">
+<div class="container">
+  <div class="section-head"><div><div class="eyebrow">Галерея</div><h2>Официальные кадры GTA VI</h2></div><a class="muted" href="https://www.rockstargames.com/VI/media/screenshots" target="_blank" rel="noopener">Все материалы →</a></div>
+  <div class="gallery">
+    <a class="shot" href="https://www.rockstargames.com/VI/media/screenshots" target="_blank"><img loading="lazy" src="https://www.rockstargames.com/VI/_next/static/media/Jason_and_Lucia_Beach_landscape.0419q._86ukpt.jpg?akim=1&imdensity=1&imwidth=1600" alt="Jason and Lucia"><label>Jason & Lucia</label></a>
+    <a class="shot" href="https://www.rockstargames.com/VI/media/screenshots" target="_blank"><img loading="lazy" src="https://www.rockstargames.com/VI/_next/static/media/Vice_City_Postcard_landscape.0v2njmlk2n-qm.jpg?akim=1&imdensity=1&imwidth=1600" alt="Vice City"><label>Vice City</label></a>
+    <a class="shot" href="https://www.rockstargames.com/VI/media/artwork-wallpapers" target="_blank"><img loading="lazy" src="https://www.rockstargames.com/VI/_next/static/media/Official_Cover_Art_landscape.12.uu2irr.2_a.jpg?akim=1&imdensity=1&imwidth=1600" alt="GTA VI official cover art"><label>Official Cover Art</label></a>
+    <a class="shot" href="https://www.rockstargames.com/VI/media/screenshots" target="_blank"><img loading="lazy" src="https://www.rockstargames.com/VI/_next/static/media/Leonida_Keys_Postcard_landscape.4zq8c7.6j6w3a.jpg?akim=1&imdensity=1&imwidth=1600" alt="Leonida Keys"><label>Leonida Keys</label></a>
+    <a class="shot" href="https://www.rockstargames.com/VI/media/screenshots" target="_blank"><img loading="lazy" src="https://www.rockstargames.com/VI/_next/static/media/Port_Gellhorn_Postcard_landscape.0q2k3q.5qv3p5.jpg?akim=1&imdensity=1&imwidth=1600" alt="Port Gellhorn"><label>Port Gellhorn</label></a>
+    <a class="shot" href="https://www.rockstargames.com/VI/media/screenshots" target="_blank"><img loading="lazy" src="https://www.rockstargames.com/VI/_next/static/media/Grassrivers_Postcard_landscape.2m2v2m.3m0y2p.jpg?akim=1&imdensity=1&imwidth=1600" alt="Grassrivers"><label>Grassrivers</label></a>
+  </div>
+  <div class="strip">
+    <div class="strip-item"><div class="ico">⚡</div><b>Быстрая витрина</b><span>Удобная навигация и оформление.</span></div>
+    <div class="strip-item"><div class="ico">🛡</div><b>Безопасность</b><span>Секреты оплаты не хранятся в HTML.</span></div>
+    <div class="strip-item"><div class="ico">📱</div><b>Mobile First</b><span>Корректно выглядит на телефоне.</span></div>
+    <div class="strip-item"><div class="ico">🎧</div><b>Поддержка</b><span>Добавьте свои каналы связи.</span></div>
+  </div>
+</div>
+</section>
+
+<section class="section" id="faq">
+<div class="container">
+  <div class="section-head"><div><div class="eyebrow">FAQ</div><h2>Часто задаваемые вопросы</h2></div></div>
+  <div class="faq">
+    <details><summary>Когда выходит GTA VI?</summary><p>Rockstar Games указывает дату 19 ноября 2026 года.</p></details>
+    <details><summary>Какие платформы указаны официально?</summary><p>На официальной странице GTA VI указаны PlayStation 5 и Xbox Series X|S.</p></details>
+    <details><summary>Это официальный магазин Rockstar?</summary><p>Нет. GameKeys — отдельная витрина. Она не должна представляться как Rockstar Games или официальный магазин Rockstar.</p></details>
+    <details><summary>Работает ли кнопка покупки?</summary><p>В этой версии она демонстрационная. Реальную оплату нужно подключать через сервер и платёжного провайдера.</p></details>
+  </div>
+</div>
+</section>
 </main>
 
-<footer><div class="wrap footerline"><span>© 2026 GameKeys</span><span>Цифровые товары • Условия • Поддержка</span></div></footer>
-</body></html>
+<footer>
+<div class="container">
+  <div class="footer-grid">
+    <div><div class="brand"><span class="brand-mark"></span>Game<b>Keys</b></div><p class="muted" style="font-size:12px;max-width:360px">Независимая витрина цифровых игр. GTA VI и материалы игры принадлежат соответствующим правообладателям.</p></div>
+    <div class="footer-links"><a href="#about">Об игре</a><a href="#product">Каталог</a><a href="#gallery">Галерея</a><a href="#faq">FAQ</a></div>
+    <div class="footer-links"><a href="https://www.rockstargames.com/VI" target="_blank" rel="noopener">Rockstar Games</a></div>
+  </div>
+  <div class="legal"><span>© 2026 GameKeys. Независимый проект.</span><span>Не связан и не аффилирован с Rockstar Games.</span></div>
+</div>
+</footer>
+
+<div class="modal" id="modal" onclick="if(event.target===this)closeModal()">
+  <div class="modal-card">
+    <button class="close" onclick="closeModal()">×</button>
+    <div class="eyebrow">Оформление</div>
+    <h3>Оплата ещё не подключена</h3>
+    <p class="muted">Это готовая витрина сайта. Для настоящих платежей нужна серверная часть и платёжный провайдер. Секретные ключи нельзя размещать в <code>index.html</code>.</p>
+    <button class="btn btn-primary" onclick="closeModal()">Понятно</button>
+  </div>
+</div>
+<script>
+function openModal(){document.getElementById('modal').classList.add('open')}
+function closeModal(){document.getElementById('modal').classList.remove('open')}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
+</script>
+</body>
+</html>
