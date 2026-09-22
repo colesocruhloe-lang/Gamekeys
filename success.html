@@ -1,2 +1,31 @@
-<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>GameKeys — Заказ</title>
-<style>body{margin:0;background:#07070d;color:#fff;font-family:system-ui;padding:30px}.box{max-width:680px;margin:10vh auto;background:#10101a;border:1px solid #262634;border-radius:24px;padding:32px}h1{font-size:42px}.muted{color:#aaa6ba;line-height:1.6}.ok{color:#48e0a4;font-weight:900}.btn{display:inline-block;margin-top:20px;padding:13px 18px;background:linear-gradient(135deg,#ff3ea5,#7c4dff);border-radius:12px;color:#fff;text-decoration:none;font-weight:900}</style></head><body><div class="box"><div class="ok">✓ Оплата подтверждена</div><h1>Заказ принят</h1><p class="muted">Stripe сообщил об успешном Checkout. Реальную выдачу ключа подключай только через серверную inventory-систему после проверки webhook.</p><p class="muted">Session ID: <span id="sid"></span></p><a class="btn" href="/">Вернуться в магазин</a></div><script>document.getElementById('sid').textContent=new URLSearchParams(location.search).get('session_id')||'—'</script></body></html>
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GameKeys — Заказ</title>
+<style>
+body{margin:0;background:#07070d;color:#fff;font-family:system-ui,-apple-system,sans-serif;padding:24px}
+.box{max-width:680px;margin:10vh auto;background:#10101a;border:1px solid #2a2938;border-radius:24px;padding:32px}
+.ok{color:#48e0a4;font-weight:900}.muted{color:#aaa6ba;line-height:1.6}.code{display:none;margin:24px 0;padding:18px;border:1px solid #ff3ea5;border-radius:16px;background:#0b0b12;font:800 22px ui-monospace,monospace;letter-spacing:.06em;word-break:break-all}
+.btn{display:inline-block;margin-top:12px;padding:13px 18px;background:linear-gradient(135deg,#ff3ea5,#7c4dff);border-radius:12px;color:#fff;text-decoration:none;font-weight:900}
+.err{color:#ff8d8d}
+</style></head>
+<body><div class="box">
+<div class="ok">✓ Оплата подтверждена</div>
+<h1>Заказ готов</h1>
+<p id="status" class="muted">Проверяем платёж…</p>
+<div id="code" class="code"></div>
+<a class="btn" href="/">Вернуться в магазин</a>
+</div>
+<script>
+(async()=>{
+  const sid=new URLSearchParams(location.search).get('session_id');
+  const status=document.getElementById('status'), code=document.getElementById('code');
+  if(!sid){status.textContent='Не найден номер заказа.';status.className='muted err';return}
+  try{
+    const r=await fetch('/api/order/'+encodeURIComponent(sid));
+    const d=await r.json();
+    if(!r.ok) throw new Error(d.error||'Не удалось подтвердить заказ');
+    status.textContent='Ваш цифровой код:';
+    code.textContent=d.code; code.style.display='block';
+  }catch(e){status.textContent=e.message;status.className='muted err'}
+})();
+</script></body></html>

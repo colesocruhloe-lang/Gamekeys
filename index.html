@@ -69,25 +69,24 @@
   <article class="card"><img src="https://www.rockstargames.com/VI/_next/static/media/Official_Cover_Art_landscape.12.uu2irr.2_a.jpg?akim=1&imdensity=1&imwidth=3840" alt="Official Cover Art"></article>
 </div></div></section>
 
-<section id="buy"><div class="wrap buy"><div class="buybox"><div class="kicker">Checkout</div><h2>GTA VI — $45</h2><p class="lead" style="font-size:15px">Оплата картой и Apple Pay показывается на защищённой странице Stripe Checkout, если эти методы включены для твоего Stripe-аккаунта и домена.</p>
+<section id="buy"><div class="wrap buy"><div class="buybox"><div class="kicker">Checkout</div><h2>GTA VI — $45</h2><p class="lead" style="font-size:15px">Оплата проходит на защищённой странице платёжного провайдера. Доступные способы оплаты показываются автоматически.</p>
 <div class="features"><div class="feat"><span class="check">✓</span><span>Банковские карты</span></div><div class="feat"><span class="check">✓</span><span>Apple Pay при поддержке устройства/региона</span></div><div class="feat"><span class="check">✓</span><span>Stripe 3-D Secure при необходимости</span></div><div class="feat"><span class="check">✓</span><span>Webhook подтверждает оплату на сервере</span></div></div>
 <button class="btn primary" style="width:100%" onclick="startCheckout()">Перейти к оплате</button>
 <p class="secure">Номер карты не проходит через этот HTML-сайт. Секретный Stripe ключ хранится только на сервере.</p></div>
 <div class="notice"><strong style="color:#fff">Важно перед запуском</strong><br><br>
-Этот шаблон не содержит настоящих ключей и не обещает автоматическую выдачу товара. В `server.js` есть безопасная точка для подключения твоего легального inventory. Для реальных платежей нужен активный Stripe-аккаунт, настройка Apple Pay и прохождение проверки провайдера.
+После подтверждения платежа сервер обрабатывает заказ и показывает покупателю страницу результата.
 </div></div></section>
 
 <section id="faq"><div class="wrap"><div class="sectionhead"><div><div class="kicker">FAQ</div><h2>Вопросы</h2></div></div>
 <div class="faq">
-<details><summary>Можно ли оплатить Apple Pay?</summary><p>Да, Stripe Checkout поддерживает Apple Pay, но конкретный метод отображается с учётом настроек аккаунта, домена, страны и устройства покупателя.</p></details>
+<details><summary>Можно ли оплатить Apple Pay?</summary><p>Да, Доступные способы оплаты отображаются автоматически на защищённой странице оплаты.</p></details>
 <details><summary>Можно ли получать выплату в MetaMask?</summary><p>Это не настраивается одной строкой в HTML. У Stripe есть отдельные crypto/stablecoin payout-продукты и требования к доступности и проверке. Если твой аккаунт допущен к такой функции, можно настроить USDC payout на совместимый кошелёк.</p></details>
-<details><summary>Почему нельзя просто вписать адрес MetaMask?</summary><p>Адрес кошелька сам по себе не превращает карточную оплату в криптовалютную выплату. Платёжный провайдер должен принять карту, подтвердить транзакцию и затем провести разрешённую выплату.</p></details>
 </div></div></section>
 </main>
 
 <footer><div class="wrap foot"><div>© 2026 GameKeys</div><div>Independent storefront. Not affiliated with Rockstar Games.</div></div></footer>
 
-<div class="modal" id="demoModal"><div class="modalbox"><button class="close" onclick="closeModal()">×</button><h3>Checkout ещё не настроен</h3><p style="color:#aaa6ba;line-height:1.6">Если сервер запущен и в `.env` указан `STRIPE_SECRET_KEY`, эта кнопка отправит покупателя в Stripe Checkout.</p><button class="btn secondary" onclick="closeModal()">Закрыть</button></div></div>
+<div class="modal" id="demoModal"><div class="modalbox"><button class="close" onclick="closeModal()">×</button><h3>Checkout ещё не настроен</h3><p style="color:#aaa6ba;line-height:1.6">Оплата временно недоступна. Вернитесь позже.</p><button class="btn secondary" onclick="closeModal()">Закрыть</button></div></div>
 
 <script>
 async function startCheckout(){
